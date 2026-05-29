@@ -3,13 +3,15 @@ import { createSupabaseAdminClient } from "@/lib/supabase/server";
 
 // Bu endpoint Vercel Cron veya harici bir cron tetikleyici ile
 // her gece 00:10'da çalışacak şekilde yapılandırılabilir.
+export const dynamic = "force-dynamic";
+
 export async function GET(request: Request) {
   try {
     // Cron isteğinin yetkisini kontrol et (Opsiyonel ama önerilir)
-    // const authHeader = request.headers.get("authorization");
-    // if (process.env.CRON_SECRET && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    //   return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    // }
+    const authHeader = request.headers.get("authorization");
+    if (process.env.CRON_SECRET && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
 
     const supabase = createSupabaseAdminClient();
 
