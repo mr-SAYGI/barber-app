@@ -1,0 +1,113 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      "colors": {
+        "on-error": "#690005",
+        "surface-bright": "#38393a",
+        "surface": "#121415",
+        "on-secondary-fixed-variant": "#474649",
+        "secondary-fixed-dim": "#c8c6c8",
+        "on-background": "#e2e2e3",
+        "surface-container-low": "#1a1c1d",
+        "secondary-fixed": "#e5e1e4",
+        "error": "#ffb4ab",
+        "background": "#121415",
+        "surface-dim": "#121415",
+        "on-primary": "#3c2f00",
+        "secondary-container": "#474649",
+        "outline": "#99907c",
+        "tertiary": "#d0ced0",
+        "on-surface-variant": "#d0c5af",
+        "tertiary-fixed-dim": "#c8c6c8",
+        "primary-fixed": "#ffe088",
+        "inverse-surface": "#e2e2e3",
+        "surface-tint": "#e9c349",
+        "on-secondary-fixed": "#1b1b1d",
+        "on-tertiary-fixed-variant": "#474649",
+        "tertiary-container": "#b5b2b5",
+        "surface-container-highest": "#333536",
+        "on-primary-fixed": "#241a00",
+        "surface-container": "#1e2021",
+        "primary-fixed-dim": "#e9c349",
+        "on-tertiary-fixed": "#1c1b1d",
+        "on-error-container": "#ffdad6",
+        "on-secondary-container": "#b7b4b7",
+        "inverse-on-surface": "#2f3132",
+        "surface-variant": "#333536",
+        "error-container": "#93000a",
+        "on-tertiary": "#313032",
+        "on-primary-fixed-variant": "#574500",
+        "outline-variant": "#4d4635",
+        "tertiary-fixed": "#e5e1e4",
+        "primary-container": "#d4af37",
+        "surface-container-high": "#282a2b",
+        "on-surface": "#e2e2e3",
+        "on-tertiary-container": "#454547",
+        "secondary": "#c8c6c8",
+        "surface-container-lowest": "#0c0e0f",
+        "inverse-primary": "#735c00",
+        "on-secondary": "#303032",
+        "on-primary-container": "#554300",
+        "primary": "#f2ca50"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem",
+        "2xl": "1rem"
+      },
+      "spacing": {
+        "xl": "80px",
+        "base": "8px",
+        "safe-area-desktop": "40px",
+        "md": "24px",
+        "xs": "4px",
+        "gutter": "24px",
+        "sm": "12px",
+        "safe-area-mobile": "20px",
+        "lg": "48px"
+      },
+      "fontFamily": {
+        "label-md": ["Inter", "sans-serif"],
+        "headline-md": ["Montserrat", "sans-serif"],
+        "headline-lg-mobile": ["Montserrat", "sans-serif"],
+        "display-sm": ["Montserrat", "sans-serif"],
+        "body-md": ["Inter", "sans-serif"],
+        "headline-lg": ["Montserrat", "sans-serif"],
+        "body-lg": ["Inter", "sans-serif"],
+        "display-lg": ["Montserrat", "sans-serif"],
+        "caption": ["Inter", "sans-serif"]
+      },
+      "fontSize": {
+        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "800"}],
+        "display-sm": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+      },
+      animation: {
+        'marquee': 'marquee 30s linear infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100vw)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
+      }
+    },
+  },
+  plugins: [],
+};
